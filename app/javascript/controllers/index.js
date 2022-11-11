@@ -5,6 +5,7 @@ import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 
+
 const application = Application.start()
 const context = require.context("controllers", true, /_controller\.js$/)
 application.load(definitionsFromContext(context))
