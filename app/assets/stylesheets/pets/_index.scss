@@ -1,18 +1,40 @@
+.indexpets{
+  display: flex;
+  justify-content: space-around;
+  // align-items: center;
+  margin: 0 auto;
+}
+
 .allpets{
   margin: 20px auto;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 60%;
   padding: 30px;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
+// @media(max-width: 992px) {
+//   .allpets {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
+
+// @media(max-width: 600px) {
+//   .allpets {
+//     grid-template-columns: 1fr;
+//   }
+// }
 .pet-card{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: white;
   border-radius: 6px;
   padding: 12px;
-  width: 300px;
+  // width: 400px;
   margin: 20px 0;
-  height: 500px;
+  // height: 500px;
 
-
+}
+.petmap{
+  width: 40%;
 }
