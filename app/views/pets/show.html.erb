@@ -1,0 +1,23 @@
+
+    <div class="pet-infos">
+      <ul>
+        <li><%= @pet.status %></li>
+        <li> <%= @pet.event_date %> </li>
+        <li><%= @pet.name %></li>
+        <li><%= @pet.specie %></li>
+        <li><%= @pet.breed %></li>
+        <li><%= @pet.color %></li>
+        <li><%= @pet.age %></li>
+        <li><%= @pet.address %></li>
+        <li><%= @pet.email %></li>
+        <li><%= @pet.tel %></li>
+        <li><%= @pet.details %></li>
+      </ul>
+      <% if @pet.user_id == current_user.id %>
+        <%= link_to "Edit", edit_pet_path(@pet.id) %>
+        <%= link_to "destroy", pet_path(@pet.id), method: :delete %>
+      <% end %>
+    </div>
+
+
+<%= link_to "back", pets_path %>
