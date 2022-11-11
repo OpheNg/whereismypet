@@ -1,6 +1,7 @@
 <div class="petcreation">
 
   <%= simple_form_for @pet do |f| %>
+        <%= f.input :photo, as: :file %>
         <%= f.select :status, Pet::OPTIONS %>
         <%#= f.input :status, placeholder:"Lost or Found" %>
         <%= f.input :event_date %>

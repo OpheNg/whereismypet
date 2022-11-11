@@ -5,6 +5,13 @@
       <% @pets.each do |pet| %>
         <div class="pet-card">
           <ul>
+            <li>
+              <% if pet.photo.attached?%>
+                  <%= cl_image_tag pet.photo.key, height: 150, width: 150, crop: :fill %>
+              <%else %>
+                <% image_tag 'pawprint.png' %>
+              <%end %>
+            </li>
             <li><%= pet.status %></li>
             <li><%= pet.event_date %></li>
             <li><%= pet.name %></li>
