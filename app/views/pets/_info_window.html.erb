@@ -1,3 +1,8 @@
 <h3><%= pet.status %></h3>
+<% if pet.photo.attached?%>
+    <%= cl_image_tag pet.photo.key, height: 60, width: 60, crop: :fill %>
+<%else %>
+  <% image_tag 'pawprint.png' %>
+<%end %>
 <p><%= pet.event_date %></p>
 <p><%= pet.address %></p>
