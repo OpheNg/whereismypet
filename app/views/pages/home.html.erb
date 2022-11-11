@@ -1,2 +1,47 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="landing">
+  <div class="where">
+    <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668096643/wantedpets/cut_ujtbzm.png', width:'100%' %>
+  </div>
+
+  <div class="description">
+
+     <div class="description-text">
+      <h2>Welcome to Wanted Pets !</h2>
+      <p>The best way to find your missing furry (or not) little friend.</p>
+    </div>
+
+    <div class="info">
+      <div class="subinfo">
+
+        <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668110842/wantedpets/Lost_doggy_tpjbvq.png', width:'300px' %>
+        <p> <span class ="lostpet">You lost your pet ?</span><br><br> You can create a post with de picture and the last known location of your pet, and take a look at the other posts to find out if someone saw or found your pet. <br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum and scrambled it to make a type specimen book. </p>
+      </div>
+      <br>
+       <div class="subinfo">
+        <p><span class="foundpet">You found a pet ?</span> <br><br>Post photos and location of the pets you found. <br> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum and scrambled it to make a type specimen book. </p>
+        <%= image_tag"https://res.cloudinary.com/dhxefoe7j/image/upload/v1668110733/wantedpets/found_kitty_1_j1d79k.png" , width:'300px'%>
+      </div>
+    </div>
+    <%if user_signed_in? %>
+      <div class="linkldg">
+        <%= link_to "Let's go", pets_path %>
+      </div>
+    <%end %>
+  </div>
+
+  <div class="footer">
+    <div class="mail">
+      <p><i class="fa-solid fa-address-card"></i> contact@wantedpets.org </p>
+    </div>
+
+    <div class="social-media">
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+    </div>
+  </div>
+
+</div>

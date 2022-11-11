@@ -1,1 +1,95 @@
 // Specific CSS for your home-page
+// Specific CSS for your home-page
+.description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  padding: 40px 16px;
+
+}
+.subinfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subinfo p{
+  padding: 0 26px;
+  text-align: justify;
+}
+.info{
+  width: 60%;
+}
+.subinfo span{
+  font-weight: bold;
+  color: rgb(101, 94, 237);
+  font-size: 20px;
+}
+.description-text{
+  display: flex;
+  flex-direction: column;
+  justify-content:left;
+  padding: 16px 0 60px 0;
+}
+.description-text h2 {
+  padding-top: 20px;
+  color: rgb(101, 94, 237);
+  font-size: 50px;
+  // background-color: rgb(90, 225, 185);
+}
+.description-text p{
+  color: rgb(101, 94, 237);
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+
+
+}
+// .footer {
+//   text-align: center;
+//   line-height: 8px;
+//   padding-top: 32px;
+//   padding-bottom: 8px;
+//   // margin-left: 100px;
+//   // margin-right: 100px;
+// }
+
+.footer li {
+  text-decoration: none;
+  display: inline;
+  text-align: center;
+}
+
+.footer p{
+  font-size: 16px;
+  color: rgb(101, 94, 237);
+}
+
+.footer .info i{
+  font-size: 16px;
+}
+.footer .follow {
+  font-size: 16px;
+}
+.footer ul{
+  padding-left: 0;
+}
+.footer i {
+  font-size: 24px;
+  padding: 16px;
+}
+.footer a {
+  color: rgb(101, 94, 237);
+}
+.footer a:hover {
+  color: rgb(90, 225, 185);
+}
+.social-media{
+  padding-right: 24px;
+}
+.mail{
+  margin-left: 20px;
+}
