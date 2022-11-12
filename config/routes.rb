@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'home', to: "pages#home"
   get 'my_page',to:"pages#my_page"
   get "pets", to: "pets#index"
+  get 'profile', to: "pages#profile"
+  get 'my_posts', to: "pages#my_posts"
+  
 
   resources :pets
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

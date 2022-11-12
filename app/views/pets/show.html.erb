@@ -1,6 +1,7 @@
 
     <div class="pet-infos">
       <ul>
+        <li><%= cl_image_tag @pet.photo.key, height: 160, width: 160, crop: :fill %></li>
         <li><%= @pet.status %></li>
         <li> <%= @pet.event_date %> </li>
         <li><%= @pet.name %></li>
