@@ -1,0 +1,37 @@
+<h1>My posts</h1>
+
+<div class="mine">
+
+  <% @pets.each do |pet| %>
+        <div class="pet-card">
+          <ul>
+            <li>
+              <% if pet.photo.attached?%>
+                  <%= cl_image_tag pet.photo.key, height: 150, width: 150, crop: :fill %>
+              <%else %>
+                <% image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668206144/wantedpets/pawprint_q6euzv.png', height: 150, width: 150, crop: :fill %>
+              <%end %>
+            </li>
+            <li><%= pet.status %></li>
+            <li><%= pet.event_date %></li>
+            <li><%= pet.name %></li>
+            <li><%= pet.specie %></li>
+            <li><%= pet.breed %></li>
+            <li><%= pet.color %></li>
+            <li><%= pet.age %></li>
+            <li><%= pet.address %></li>
+            <li><%= pet.email %></li>
+            <li><%= pet.tel %></li>
+            <li><%= pet.details%></li>
+          </ul>
+          <% if pet.user_id == current_user.id %>
+            <%= link_to "Edit", edit_pet_path(pet.id) %>
+            <%= link_to "destroy", pet_path(pet.id), method: :delete, data: {confirm: 'Are you sure you wanna delete this post ?'} %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+
+
+</div>
