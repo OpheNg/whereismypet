@@ -9,7 +9,7 @@
               <% if pet.photo.attached?%>
                   <%= cl_image_tag pet.photo.key, height: 150, width: 150, crop: :fill %>
               <%else %>
-                <% image_tag 'pawprint.png' %>
+                <% image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668206144/wantedpets/pawprint_q6euzv.png', height: 150, width: 150, crop: :fill %>
               <%end %>
             </li>
             <li><%= pet.status %></li>

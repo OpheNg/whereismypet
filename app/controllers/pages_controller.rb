@@ -5,4 +5,8 @@ class PagesController < ApplicationController
   end
   def my_page
   end
+  def profile
+  end
+  def my_posts
+  end
 end
