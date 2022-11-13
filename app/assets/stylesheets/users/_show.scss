@@ -1,5 +1,5 @@
 .prof{
-  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1668276740/wantedpets/profile_bkground_1_qthf0t.png');
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1668359444/wantedpets/profile_bkground_3_almmhl.png');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -10,12 +10,28 @@
   color: rgb(134, 76, 248);
   font-size: 50px;
   font-weight: bold;
+
 }
 .profile-box{
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 10px;
-  padding: 16px;
+  padding: 24px;
   margin: 20px;
-  width: 50%;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.profile-pic-box{
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+
 }
