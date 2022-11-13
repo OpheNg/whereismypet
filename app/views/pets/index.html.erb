@@ -15,7 +15,6 @@
                   <%end %>
                 </li>
               </div>
-
               <div class="important">
                 <% if pet.status == "Lost" %>
                   <li class="colorstat"><%= pet.status.upcase %></li>
@@ -26,23 +25,23 @@
                 <li class="city"><%= pet.city %></li>
               </div>
             </div>
-
+            <br>
             <div class="downcard">
               <% if pet.status == "Lost" %>
-                <li><b><%= pet.name %> - <%= pet.sex %> </b></li>
+                <li><b><%= pet.name.capitalize %> - <%= pet.sex %> </b></li>
                 <li><%= pet.age %></li>
-                <li><%= pet.specie %></li>
-                <li><%= pet.breed %></li>
-                <li><%= pet.color %></li>
-                <li>Where : <span class ="add"><%= pet.address %></span> </li>
-                <li>Details : <%= pet.details%></li>
+                <li><%= pet.specie.capitalize %></li>
+                <li><%= pet.breed.capitalize %></li>
+                <li><%= pet.color.capitalize %></li>
+                <li><span class ="add"><i class="fa-solid fa-location-dot"></i> <%= pet.address.capitalize %></span> </li>
+                <li>Details : <%= pet.details.capitalize%></li>
                 <li><b><%= pet.email %></b></li>
                 <li><b><%= pet.tel %></b></li>
               <% elsif pet.status == "Found" %>
-                <li><%= pet.specie %></li>
-                <li><%= pet.breed %></li>
-                <li><%= pet.color %></li>
-                <li>Where : <span class="add"><%= pet.address %></span> </li>
+                <li><%= pet.specie.capitalize %></li>
+                <li><%= pet.breed.capitalize %></li>
+                <li><%= pet.color.capitalize %></li>
+                <li><span class="add"><i class="fa-solid fa-location-dot"></i> <%= pet.address.capitalize %></span> </li>
                 <li>Details : <%= pet.details%></li>
                 <li><b><%= pet.email %></b></li>
                 <li><b><%= pet.tel %></b></li>
