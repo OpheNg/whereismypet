@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
   end
   def my_page
+    @user= current_user
 
   end
   def profile

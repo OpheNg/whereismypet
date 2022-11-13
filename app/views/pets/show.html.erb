@@ -1,7 +1,12 @@
 
     <div class="pet-infos">
       <ul>
-        <li><%= cl_image_tag @pet.photo.key, height: 160, width: 160, crop: :fill %></li>
+        <li><% if @pet.photo.attached?%>
+                  <%= cl_image_tag @pet.photo.key, height: 160, width: 160, crop: :fill %>
+              <%else %>
+                <% image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668206144/wantedpets/pawprint_q6euzv.png', height: 160, width: 160, crop: :fill %>
+              <%end %>
+        </li>
         <li><%= @pet.status %></li>
         <li> <%= @pet.event_date %> </li>
         <li><%= @pet.name %></li>

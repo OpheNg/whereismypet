@@ -1,0 +1,38 @@
+<div class="prof">
+  <div class="title-profile">
+    <h1>My Profile</h1>
+  </div>
+  <br>
+  <div class="wrap">
+
+    <div class="profile-box">
+      <div class="infos">
+        <h3>My informations</h3>
+          <br>
+          <p> My name : <b> <%= @user.firstname %> <%= @user.lastname %> </b></p>
+          <p> Email : <b> <%= @user.email %> </b></p>
+          <p> Telephone : <b> <%= @user.tel %> </b></p>
+          <p> Address : <b> <%= @user.address %> </b></p>
+          <br><br>
+          <%= link_to "edit informations", edit_user_path(@user) %>
+      </div>
+      <div class="profile-pic-box">
+        <li><% if @user.photo.attached?%>
+                  <%= cl_image_tag @user.photo.key, height: 220, width: 220, crop: :fill %>
+              <%else %>
+                <% image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668206144/wantedpets/pawprint_q6euzv.png', height: 160, width: 160, crop: :fill %>
+              <%end %>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+</div>
