@@ -1,4 +1,7 @@
-<h1> Lost & Found Pets - <%= link_to "create a post", new_pet_path %></h1>
+<div class="titre">
+  <h1> Lost & Found Pets </h1>
+  <p><%= link_to "create a post", new_pet_path %></p>
+</div>
 
 <div class="indexpets">
   <div class="allpets">
@@ -30,14 +33,14 @@
                 <li><%= pet.color.capitalize %></li>
                 <li><%= pet.age %></li>
                 <li><span class ="add"><i class="fa-solid fa-location-dot"></i> <%= pet.address.capitalize %></span> </li>
-                <li>Details : <%= pet.details.capitalize%></li>
+                <li><i class="fa-solid fa-circle-info"></i> <%= pet.details.capitalize%></li>
                 <li><b><%= pet.email %></b></li>
                 <li><b><%= pet.tel %></b></li>
               <% elsif pet.status == "Found" %>
                 <li><%= pet.specie.capitalize %> / <%= pet.breed.capitalize %></li>
                 <li><%= pet.color.capitalize %></li>
                 <li><span class="add"><i class="fa-solid fa-location-dot"></i> <%= pet.address.capitalize %></span> </li>
-                <li>Details : <%= pet.details%></li>
+                <li><i class="fa-solid fa-circle-info"></i> <%= pet.details%></li>
                 <li><b><%= pet.email %></b></li>
                 <li><b><%= pet.tel %></b></li>
               <% end %>
@@ -55,7 +58,7 @@
     </div>
 
   <div class="petmap">
-    <div style="width: 100%; height: 600px;"
+    <div style="width: 100%; height: 100vh;"
   data-controller="mapbox"
   data-mapbox-markers-value="<%= @markers.to_json %>"
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>

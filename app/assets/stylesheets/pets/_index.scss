@@ -6,7 +6,7 @@
 }
 
 .allpets{
-  margin: 20px auto;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -25,18 +25,48 @@
 //     grid-template-columns: 1fr;
 //   }
 // }
+.titre h1{
+  color: rgb(134, 76, 248);
+  font-weight: bold;
+  font-size: 50px;
+}
+.titre{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+.titre a{
+  text-decoration: none;
+  background-color: rgb(83, 64, 225);
+  color: white;
+  // font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+.titre a:hover{
+  text-decoration: none;
+  background-color: rgb(53, 39, 163);
+  color: white;
+  font-weight: bold;
+}
+
 .pet-card{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  background-color: white;
-  border-radius: 6px;
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1668376359/wantedpets/Sans_titre_-_2022-11-13T225230.224_dfq45e.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
   padding: 20px;
   // width: 400px;
-  margin: 20px 0;
+  // margin: 20px 0;
   // height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
+  color: rgb(82, 80, 80);
 
 }
 .pet-card img{
@@ -73,4 +103,7 @@ span.add{
 .important{
   margin-left: 20px;
 
+}
+.mapboxgl-map{
+  height: 100%;
 }
