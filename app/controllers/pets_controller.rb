@@ -1,7 +1,17 @@
 class PetsController < ApplicationController
   def index
     @user = current_user
-    @pets = Pet.all
+    if params[:query].present?
+      sql_query = " \
+      pets.name ILIKE :query \
+      OR pets.specie ILIKE :query \
+      OR pets.status ILIKE :query \
+      "
+      @pets = Pet.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @user = current_user
+      @pets = Pet.all
+    end
     @markers = @pets.geocoded.map do |pet|
       {
         lat: pet.latitude,
