@@ -5,29 +5,51 @@
   <% @pets.each do |pet| %>
         <div class="pet-card">
           <ul>
-            <li>
-              <% if pet.photo.attached?%>
-                  <%= cl_image_tag pet.photo.key, height: 150, width: 150, crop: :fill %>
-              <%else %>
-                <% image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668206144/wantedpets/pawprint_q6euzv.png', height: 150, width: 150, crop: :fill %>
-              <%end %>
-            </li>
-            <li><%= pet.status %></li>
-            <li><%= pet.event_date %></li>
-            <li><%= pet.name %></li>
-            <li><%= pet.specie %></li>
-            <li><%= pet.breed %></li>
-            <li><%= pet.color %></li>
-            <li><%= pet.age %></li>
-            <li><%= pet.address %></li>
-            <li><%= pet.email %></li>
-            <li><%= pet.tel %></li>
-            <li><%= pet.details%></li>
+            <div class="upcard">
+              <div class="clpet">
+                <li>
+                  <% if pet.photo.attached?%>
+                      <%= cl_image_tag pet.photo.key, height: 200, width: 200, crop: :fill %>
+                  <%else %>
+                    <% image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668206144/wantedpets/pawprint_q6euzv.png', height: 200, width: 200, crop: :fill %>
+                  <%end %>
+                </li>
+              </div>
+            </div>
+            <br>
+            <div class="downcard">
+            <% if pet.status == "Lost" %>
+                  <li class="colorstat"><%= pet.status.upcase %></li>
+                <% elsif pet.status == "Found" %>
+                  <li class="greenstat"><%= pet.status.upcase %></li>
+                <% end %>
+            <li><b><%= pet.event_date.strftime('%d'' %B'' %y') %></b></li>
+              <% if pet.status == "Lost" %>
+                <li><b><%= pet.name.capitalize %> - <%= pet.sex %> </b></li>
+                <li><%= pet.specie.capitalize %> / <%= pet.breed.capitalize %></li>
+                <li><%= pet.color.capitalize %></li>
+                <li><%= pet.age %></li>
+                <li><span class ="add"><i class="fa-solid fa-location-dot"></i> <%= pet.address.capitalize %></span> </li>
+                <li>Details : <%= pet.details.capitalize%></li>
+                <li><b><%= pet.email %></b></li>
+                <li><b><%= pet.tel %></b></li>
+              <% elsif pet.status == "Found" %>
+                <li><%= pet.specie.capitalize %> / <%= pet.breed.capitalize %></li>
+                <li><%= pet.color.capitalize %></li>
+                <li><span class="add"><i class="fa-solid fa-location-dot"></i> <%= pet.address.capitalize %></span> </li>
+                <li>Details : <%= pet.details%></li>
+                <li><b><%= pet.email %></b></li>
+                <li><b><%= pet.tel %></b></li>
+              <% end %>
+            </div>
           </ul>
-          <% if pet.user_id == current_user.id %>
-            <%= link_to "Edit", edit_pet_path(pet.id) %>
-            <%= link_to "destroy", pet_path(pet.id), method: :delete, data: {confirm: 'Are you sure you wanna delete this post ?'} %>
-          <% end %>
+
+          <div class="cardlinks">
+            <% if pet.user_id == current_user.id %>
+                <%= link_to "Edit", edit_pet_path(pet.id) %>
+                <%= link_to "destroy", pet_path(pet.id), method: :delete, data: {confirm: 'Are you sure you wanna delete this post ?'} %>
+              <% end %>
+          </div>
         </div>
       <% end %>
     </div>
