@@ -35,6 +35,20 @@
   // height: 500px;
 
 }
+.pet-card ul, li{
+  list-style: none;
+}
+li.colorstat{
+  color: rgb(235, 128, 128);
+  font-weight: bold;
+}
+li.greenstat{
+  color: rgb(26, 203, 132);
+  font-weight: bold;
+}
+span.add{
+  color: rgb(62, 138, 237);
+}
 .petmap{
   width: 40%;
   margin: 0 auto;

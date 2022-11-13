@@ -5,6 +5,8 @@
         <%= f.select :status, Pet::OPTIONS %>
         <%#= f.input :status, placeholder:"Lost or Found" %>
         <%= f.input :event_date %>
+        <%= f.input :city %>
+        <%= f.select :sex, Pet::SEX %>
         <%= f.input :name %>
         <%= f.input :age %>
         <%= f.input :specie %>

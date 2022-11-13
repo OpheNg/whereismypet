@@ -17,7 +17,11 @@
               </div>
 
               <div class="important">
-                <li class="colorstat"><%= pet.status.upcase %></li>
+                <% if pet.status == "Lost" %>
+                  <li class="colorstat"><%= pet.status.upcase %></li>
+                <% elsif pet.status == "Found" %>
+                  <li class="greenstat"><%= pet.status.upcase %></li>
+                <% end %>
                 <li><%= pet.event_date %></li>
                 <li class="city"><%= pet.city %></li>
               </div>
@@ -25,7 +29,7 @@
 
             <div class="downcard">
               <% if pet.status == "Lost" %>
-                <li><b><%= pet.name %></b></li>
+                <li><b><%= pet.name %> - <%= pet.sex %> </b></li>
                 <li><%= pet.age %></li>
                 <li><%= pet.specie %></li>
                 <li><%= pet.breed %></li>
