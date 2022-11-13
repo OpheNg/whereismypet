@@ -8,13 +8,21 @@
     <div class="profile-box">
       <h3>My informations</h3>
       <br>
+      <p> <b> <%= @user.lastname %> </b></p>
+      <p> <b> <%= @user.firstname %> </b></p>
       <p> <b> <%= @user.email %> </b></p>
+      <p> <b> <%= @user.tel %> </b></p>
+      <p> <b> <%= @user.address %> </b></p>
     </div>
 
     <div class="profile-pic-box">
 
+      <%= cl_image_tag @user.photo.key %>
+
     </div>
 
   </div>
+
+  <%= link_to "edit informations", edit_user_path(@user) %>
 
 </div>
