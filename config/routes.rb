@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'messages/conversations'
+  get 'messages/index'
+  get 'messages/create'
   devise_for :users
   resources :users
   root to: 'pages#home'
@@ -8,6 +11,12 @@ Rails.application.routes.draw do
   get "pets", to: "pets#index"
   get 'profile', to: "users#show"
   get 'my_posts', to: "pages#my_posts"
+
+  # chat
+  get 'conversations', to: 'messages#conversations'
+  resources :users do
+    resources :messages, only: [:index, :create]
+  end
 
 
   resources :pets

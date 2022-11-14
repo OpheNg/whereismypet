@@ -1,0 +1,18 @@
+<h1>Messages#conversations</h1>
+<p>Find me in app/views/messages/conversations.html.erb</p>
+
+
+<div class="mess">
+
+  <% if @users_with_conversation.empty? %>
+  <h3>You don't have any conversation yet</h3>
+<% else %>
+  <h3>My conversations</h3>
+  <% @users_with_conversation.each do |user| %>
+    <%= link_to user_messages_path(user) do %>
+      <p>Conversation with <%= user.firstname %> <%= user.lastname %> </p>
+    <% end %>
+  <% end %>
+<% end %>
+
+</div>
