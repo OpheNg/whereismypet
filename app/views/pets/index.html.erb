@@ -48,21 +48,30 @@
             </div>
             <br>
             <div class="downcard">
-            <% if pet.status == "Lost" %>
-                  <li class="colorstat"><%= pet.status.upcase %></li>
-                <% elsif pet.status == "Found" %>
-                  <li class="greenstat"><%= pet.status.upcase %></li>
-                <% end %>
-            <li><b><%= pet.event_date.strftime('%d'' %B'' %y') %></b></li>
               <% if pet.status == "Lost" %>
-                <li class='petname'><b><%= pet.name.capitalize %> - <%= pet.sex %> </b></li>
-                <li class='petspecie'><%= pet.specie.capitalize %> / <%= pet.breed.capitalize %></li>
-                <li><%= pet.color.capitalize %></li>
-                <li><%= pet.age %></li>
-                <li><span class ="add"><i class="fa-solid fa-location-dot"></i> <%= pet.address.capitalize %></span> </li>
-                <li><i class="fa-solid fa-circle-info"></i> <%= pet.details.capitalize%></li>
-                <li><b><%= pet.email %></b></li>
-                <li><b><%= pet.tel %></b></li>
+                    <li class="colorstat"><%= pet.status.upcase %></li>
+                  <% elsif pet.status == "Found" %>
+                    <li class="greenstat"><%= pet.status.upcase %></li>
+                  <% end %>
+              <li><b><%= pet.event_date.strftime('%d'' %B'' %y') %></b></li>
+                <% if pet.status == "Lost" %>
+                  <li class='petname'><b><%= pet.name.capitalize %> - <%= pet.sex %> </b></li>
+                  <li class='petspecie'><%= pet.specie.capitalize %> / <%= pet.breed.capitalize %></li>
+                  <li><%= pet.color.capitalize %></li>
+                  <li><%= pet.age %></li>
+                  <li><span class ="add"><i class="fa-solid fa-location-dot"></i> <%= pet.address.capitalize %></span> </li>
+                  <li><i class="fa-solid fa-circle-info"></i> <%= pet.details.capitalize%></li>
+                  <li><b><%= pet.email %></b></li>
+                  <li><b><%= pet.tel %></b></li>
+                  <br>
+                  <div class="contactmess">
+                    <% if pet.user != current_user %>
+                      <%= link_to user_messages_path(pet.user) do %>
+                        <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668463366/wantedpets/chat_ztqyvs.png', width:'30px' %>
+                      <% end %>
+                    <% end %>
+                  </div>
+
               <% elsif pet.status == "Found" %>
                 <li><%= pet.specie.capitalize %> / <%= pet.breed.capitalize %></li>
                 <li><%= pet.color.capitalize %></li>
@@ -70,6 +79,16 @@
                 <li><i class="fa-solid fa-circle-info"></i> <%= pet.details%></li>
                 <li><b><%= pet.email %></b></li>
                 <li><b><%= pet.tel %></b></li>
+                <br>
+
+                <div class="contactmess">
+                  <% if pet.user != current_user %>
+                    <%= link_to user_messages_path(pet.user) do %>
+                      <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668463366/wantedpets/chat_ztqyvs.png', width:'30px' %>
+                    <% end %>
+                  <% end %>
+                </div>
+
               <% end %>
             </div>
           </ul>
