@@ -1,5 +1,8 @@
 .editpet {
   margin: 0 auto;
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1668443673/wantedpets/Sans_titre_-_2022-11-14T173409.597_teevkv.png');
+  background-position: center;
+  background-size: cover;
 }
 
 .editform form {
@@ -14,15 +17,16 @@
 .editform input.btn{
  text-decoration: none;
   color: white;
-  background-color: rgb(62, 138, 237);
+  background-color: rgb(68, 202, 153);
   border-radius: 4px;
   padding: 4px 6px;
+  width: 100%;
 }
 
 .editform input.btn:hover{
   text-decoration: none;
   color: white;
-  background-color: rgb(29, 93, 176);
+  background-color: rgb(138, 218, 178);
   border-radius: 4px;
   padding: 4px 6px;
 }
