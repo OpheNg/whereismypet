@@ -16,10 +16,14 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/my_page";
-@import "users/show";
+
 @import "pages/my_posts";
 
 
 @import "pets/index";
 @import "pets/new";
 @import "pets/edit";
+@import "pets/show";
+
+@import "users/show";
+@import "users/edit";
