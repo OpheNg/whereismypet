@@ -1,0 +1,31 @@
+.editpet {
+  margin: 0 auto;
+}
+
+.editform form {
+  width: 450px;
+  padding: 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+  background-color: white;
+  margin: 20px 20px;
+
+}
+.editform input.btn{
+ text-decoration: none;
+  color: white;
+  background-color: rgb(62, 138, 237);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
+.editform input.btn:hover{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(29, 93, 176);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+#pet_address{
+  display: none;
+}

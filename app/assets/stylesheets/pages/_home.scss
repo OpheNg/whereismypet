@@ -93,3 +93,19 @@
 .mail{
   margin-left: 20px;
 }
+.linkldg a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(62, 138, 237);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
+
+.linkldg a:hover{
+text-decoration: none;
+color: white;
+background-color: rgb(29, 93, 176);
+border-radius: 4px;
+padding: 4px 6px;
+}

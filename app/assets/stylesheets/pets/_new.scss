@@ -1,0 +1,58 @@
+.petcreation {
+  margin: 0 auto;
+}
+
+// .createform form {
+//   // width: 100%;
+//   padding: 24px;
+//   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+//   border-radius: 8px;
+//   background-color: white;
+//   margin: 20px;
+
+// }
+.createform input.btn{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(62, 138, 237);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
+.createform input.btn:hover{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(29, 93, 176);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+#pet_address{
+  display: none;
+}
+.totalform{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // justify-content: center;
+  // align-items:flex-start;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 20px;
+  width: fit-content;
+
+    // width: 600px;
+    // padding: 24px;
+    // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 8px;
+    // background-color: white;
+    // // margin: 20px;
+
+  }
+// .mapboxgl-ctrl-geocoder--input{
+//   width: 100%;
+// }
+
+
+.leftform, .middleform, .rightform{
+  padding: 12px 30px;
+}
