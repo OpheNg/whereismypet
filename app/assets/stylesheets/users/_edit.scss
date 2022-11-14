@@ -1,0 +1,34 @@
+.editprofile{
+
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+}
+.userform{
+  width: 30%;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+#user_address{
+  display: none;
+}
+
+.userform input.btn{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(62, 65, 223);
+  border-radius: 4px;
+  padding: 4px 6px;
+  width: 100%;
+}
+
+.userform input.btn:hover{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(41, 16, 116);
+  border-radius: 4px;
+  padding: 4px 6px;
+}

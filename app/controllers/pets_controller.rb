@@ -50,7 +50,7 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
 
     if @pet.update(pet_params_update)
-      redirect_to pet_path(@pet.id)
+      redirect_to pets_path
     else
       render :edit
     end
