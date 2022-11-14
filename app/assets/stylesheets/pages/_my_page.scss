@@ -258,7 +258,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  // background-color: white;
+  background: rgb(208,220,255);
+  background: linear-gradient(90deg, rgba(208,220,255,1) 0%, rgba(245,255,250,1) 0%, rgba(230,241,252,0.9923319669664741) 9%);
+
 }
 .mydown a {
   text-decoration: none;
