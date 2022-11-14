@@ -110,3 +110,31 @@ span.add{
 .mapboxgl-map{
   height: 100%;
 }
+.cardlinks a.editlink{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(62, 138, 237);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+.cardlinks a.editlink:hover{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(29, 93, 176);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+.cardlinks a.deletelink{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(235, 128, 128);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+.cardlinks a.deletelink:hover{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(213, 112, 112);
+  border-radius: 4px;
+  padding: 4px 6px;
+}

@@ -72,8 +72,8 @@
 
           <div class="cardlinks">
             <% if pet.user_id == current_user.id %>
-                <%= link_to "Edit", edit_pet_path(pet.id) %>
-                <%= link_to "destroy", pet_path(pet.id), method: :delete, data: {confirm: 'Are you sure you wanna delete this post ?'} %>
+                <%= link_to "Edit", edit_pet_path(pet.id), class:"editlink" %>
+                <%= link_to "destroy", pet_path(pet.id), method: :delete, data: {confirm: 'Are you sure you wanna delete this post ?'}, class:"deletelink" %>
               <% end %>
           </div>
         </div>
