@@ -31,7 +31,7 @@
           </div>
 
         <%= simple_form_for [@friend, @message] do |f| %>
-        <%= f.input :content %>
+        <%= f.input :content,  label: 'Type your message :'  %>
         <%= f.submit "Send message", class: "btn btn-primary" %>
       <% end %>
     </div>
