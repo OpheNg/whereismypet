@@ -1,240 +1,15 @@
-// %animation-default {
-//   opacity: 1 !important;
-//   z-index: 3;
-// }
 
-// @mixin carousel($items, $animation: "default") {
-//   .carousel {
-//     width: 100%;
-//     position: relative;
-//     overflow: hidden;
-
-//     > input[type="radio"] {
-//       position: absolute;
-//       left: 0;
-//       opacity: 0;
-//       top: 0;
-
-//       &:checked {
-//         ~ .carousel__items .carousel__item,
-//         ~ .carousel__prev > label,
-//         ~ .carousel__next > label {
-//           opacity: 0;
-//         }
-//       }
-
-//       @for $i from 1 through $items {
-//         &:nth-child(#{$i}) {
-//           &:checked {
-//             ~ .carousel__items .carousel__item {
-//               @if $animation == "default" {
-//                 &:nth-child(#{$i}) {
-//                   opacity: 1;
-//                 }
-//               }
-//             }
-
-//             ~ .carousel__prev {
-//               > label {
-//                 @if $i == 1 {
-//                   &:nth-child(#{$items}) {
-//                     @extend %animation-default;
-//                   }
-//                 } @else if $i == $items {
-//                   &:nth-child(#{$items - 1}) {
-//                     @extend %animation-default;
-//                   }
-//                 } @else {
-//                   &:nth-child(#{$i - 1}) {
-//                     @extend %animation-default;
-//                   }
-//                 }
-//               }
-//             }
-
-//             ~ .carousel__next {
-//               > label {
-//                 @if $i == $items {
-//                   &:nth-child(1) {
-//                     @extend %animation-default;
-//                   }
-//                 } @else {
-//                   &:nth-child(#{$i + 1}) {
-//                     @extend %animation-default;
-//                   }
-//                 }
-//               }
-//             }
-
-//             ~ .carousel__nav {
-//               > label {
-//                 &:nth-child(#{$i}) {
-//                   background: #ccc;
-//                   cursor: default;
-//                   pointer-events: none;
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-
-//     &__items {
-//       margin: 0;
-//       padding: 0;
-//       list-style-type: none;
-//       width: 100%;
-//       height: 600px;
-//       position: relative;
-//     }
-
-//     &__item {
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 100%;
-//       z-index: 1;
-//       transition: opacity 2s;
-//       -webkit-transition: opacity 2s;
-
-//       img {
-//         width: 100%;
-//         vertical-align: middle;
-//       }
-//     }
-
-//     &__prev,
-//     &__next {
-//       > label {
-//         border: 1px solid #fff;
-//         border-radius: 50%;
-//         cursor: pointer;
-//         display: block;
-//         width: 40px;
-//         height: 40px;
-//         position: absolute;
-//         top: 50%;
-//         transform: translateY(-50%);
-//         -webkit-transform: translateY(-50%);
-//         transition: all 0.3s ease;
-//         -webkit-transition: all 0.3s ease;
-//         opacity: 0;
-//         z-index: 2;
-
-//         &:hover,
-//         &:focus {
-//           opacity: 0.5 !important;
-//         }
-
-//         &:before,
-//         &:after {
-//           content: "";
-//           position: absolute;
-//           width: inherit;
-//           height: inherit;
-//         }
-
-//         &:before {
-//           background: linear-gradient(
-//               to top,
-//               #fff 0%,
-//               #fff 10%,
-//               rgba(51, 51, 51, 0) 10%
-//             ),
-//             linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
-//           width: 60%;
-//           height: 60%;
-//           top: 20%;
-//         }
-//       }
-//     }
-
-//     &__prev {
-//       > label {
-//         left: 2%;
-
-//         &:before {
-//           left: 35%;
-//           top: 20%;
-//           transform: rotate(135deg);
-//           -webkit-transform: rotate(135deg);
-//         }
-//       }
-//     }
-
-//     &__next {
-//       > label {
-//         right: 2%;
-
-//         &:before {
-//           left: 10%;
-//           transform: rotate(315deg);
-//           -webkit-transform: rotate(315deg);
-//         }
-//       }
-//     }
-
-//     &__nav {
-//       position: absolute;
-//       bottom: 3%;
-//       left: 0;
-//       text-align: center;
-//       width: 100%;
-//       z-index: 3;
-
-//       > label {
-//         border: 1px solid #fff;
-//         display: inline-block;
-//         border-radius: 50%;
-//         cursor: pointer;
-//         margin: 0 0.125%;
-//         width: 20px;
-//         height: 20px;
-//       }
-//     }
-//   }
-// }
-
-// *,
-// *:before,
-// *:after {
-//   box-sizing: border-box;
-//   -webkit-box-sizing: border-box;
-//   -moz-box-sizing: border-box;
-// }
-
-//  .banner-img body {
-//   background: #fcfcfc;
-//   margin: 0;
-// }
-
-// .banner-img .container {
-//   width: 900px;
-//   min-width: 900px;
-//   margin: 50px auto;
-//   height: auto;
-//   z-index: 1;
-// }
-
-// @include carousel(5);
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-// .mypage body{
-//   background-color: #ffffff;
-// }
 
 .mypage {
-  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1668276741/wantedpets/my_page_bkground_ycq1ef.png');
-  background-position: center;
-  background-size: cover;
+  // background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1668276741/wantedpets/my_page_bkground_ycq1ef.png');
+  // background-position: center;
+  // background-size: cover;
+  background-color: white;
   margin: 0 auto;
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .mytxt{
   text-align: left;
@@ -248,121 +23,150 @@
 .mytxt span {
   color: rgb(114, 231, 161);
 }
-/*Basic structure of slider*/
 .myprofile, .myposts, .lostnfound, .messages{
   border-radius: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 16px;
-  height: 140px;
-  width: 480px;
+  height: 220px;
+  width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
   // background-color: white;
-  background: rgb(208,220,255);
-  background: linear-gradient(90deg, rgba(208,220,255,1) 0%, rgba(245,255,250,1) 0%, rgba(230,241,252,0.9923319669664741) 9%);
+  // background: rgb(208,220,255);
+  // background: linear-gradient(90deg, rgba(208,220,255,1) 0%, rgba(245,255,250,1) 0%, rgba(230,241,252,0.9923319669664741) 9%);
 
 }
-.mydown a {
+.mygrid a {
   text-decoration: none;
-  color: rgb(90, 88, 95);
+  color: white;
+  font-weight: bold;
+  font-size: 36px;
 }
-.mydown a:hover {
+.mygrid a:hover {
   text-decoration: none;
-  color: rgb(87, 46, 193);
+  color: white;
+  font-weight: bolder;
+  font-size: 38px;
+  
 }
-// .myprofile{
-//   background-color: rgb(75, 93, 209);
-// }
-// .myposts{
-//   background-color: rgb(236, 230, 137);
-// }
-// .lostnfound{
-//   background-color: rgb(114, 231, 161);
-// }
-// .messages{
-//   background-color: rgb(123, 185, 243);
-// }
+.myprofile{
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_90/v1668603807/wantedpets/gradient_1cut_rdst78.png');
+  background-position: center;
+  background-size: cover;
+
+}
+.myposts{
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_80/v1668604445/wantedpets/gradient_4_1_wwek7w.png');
+  background-position: center;
+  background-size: cover;
+
+}
+.lostnfound{
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_80/v1668603807/wantedpets/gradient_3cut_ecoa0u.png');
+  background-position: center;
+  background-size: cover;
+
+}
+.messages{
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_80/v1668603807/wantedpets/gradient_4cut_aocqia.png');
+  background-position: center;
+  background-size: cover;
+}
 .myup{
   display: flex;
   justify-content: space-between;
   height: 200px;
 
 }
+// @media(max-width: 992px) {
+//   .myup{
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
+
+// @media(max-width: 768px) {
+//   .myup {
+//     grid-template-columns: 1fr;
+//   }
+// }
 .mystuff{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 350px;
+  // height: 350px;
 }
 .gnl{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 350px;
+  // height: 350px;
 }
 
-.mydown{
+.mygrid{
   // display: grid;
-  // grid-template-columns: 1fr 1fr;
-  // gap: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  display: grid;
+  // flex-direction: row;
+  // justify-content: space-evenly;
   margin: 0 auto;
   padding: 20px 40px;
   // height: 100%;
 }
+@media(max-width: 992px) {
+  .mygrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
-// .mypage .container{
-//   // width: 100%;
-//   height: 400px;
-//   position: absolute;
-//   transform: translate(-50%,-50%);
-//   top: 50%;
-//   left: 50%;
-//   overflow: hidden;
-//   // border: 10px solid black;
-//   // border-radius: 8px;
-//   box-shadow: -1px 5px 15px black;
+@media(max-width: 768px) {
+  .mygrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+// /* Site Heading */
+// .site-heading h3{
+//   font-size : 40px;
+//   margin-bottom: 10px;
+//   font-weight: 600;
+// }
+// .border {
+//   background: #e8e8e8 ;
+//   height: 1px;
+//   width: 40%;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-bottom: 45px;
+//   float:left;
 // }
 
-// /*Area of images*/
-// .wrapper{
-//   width: 100%;
-//   display: flex;
-//   animation: slide 18s infinite;
-// }
+// /* Feature-CSS */
 
-// .wrapper img{
+// .icon {
+//   color : #fff;
+//   padding:15px;
+//   background:#323232 ;
+//   font-size:50px;
+//   border-radius:90px;
+//   border:10px solid #323232 ;
 
-//   height: 400px;
-//   object-fit: cover;
 // }
-// /*Animation activated by keyframes*/
-// @keyframes slide{
-//   0%{
-//       transform: translateX(0);
-//   }
-//   25%{
-//       transform: translateX(0);
-//   }
-//   30%{
-//       transform: translateX(-100%);
-//   }
-//   50%{
-//       transform: translateX(-100%);
-//   }
-//   55%{
-//       transform: translateX(-200%);
-//   }
-//   75%{
-//       transform: translateX(-200%);
-//   }
-//   80%{
-//       transform: translateX(-300%);
-//   }
-//   100%{
-//       transform: translateX(-300%);
-//   }
+// .feature-box {
+//   text-align: center;
+//   padding: 20px;
+//   transition: .5s;
+//   margin-bottom: 30px;
+//   border: 1px solid #e8e8e8;
+// }
+// .feature-box:hover {
+
+//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
+// .feature-box h4 {
+//   font-size: 20px;
+//   font-weight: 600;
+//   margin: 25px 0 15px;
 // }

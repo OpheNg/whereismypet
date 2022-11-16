@@ -1,20 +1,40 @@
-<h1>Messages#index</h1>
-<p>Find me in app/views/messages/index.html.erb</p>
-
-<h3>Ma conversation avec <%= @friend.firstname %></h3>
-  <% @messages.each do |message| %>
-    <ul>
-      <li><p><%= message.sender.firstname %> dit : <%= message.content %></p></li>
-    </ul>
-  <% end %>
+<div class="chatbg">
+  <%# <h1>Conversation</h1>
+  <br> %>
+  <br>
+  <p class="back2"><%= link_to 'Back to conversations', conversations_path %></p>
 
 
-  <%= simple_form_for [@friend, @message] do |f| %>
-  <%= f.input :content %>
-  <%= f.submit "Send message", class: "btn btn-primary" %>
-<% end %>
+  <div id="wrapper">
+    <div class="myconv" >
 
-<%= link_to 'Back to conversations', conversations_path %>
+      <h3>My conversation with <b class="colorful"><%= @friend.firstname %> <%= @friend.lastname %></b> </h3>
 
+      <br>
+        <div class="mess scrollbar" id="style-2">
+          <div class="force-overflow"></div>
+        <% @messages.each do |message| %>
+          <ul>
 
+            <% if message.sender.photo.attached? && message.sender == current_user%>
+              <li class ="current"> <span><%= message.content %> </span> <%= cl_image_tag message.sender.photo.key, width:30, class:'avatar'%>  </p> </li>
+            <% elsif message.sender.photo.attached? && message.sender != current_user%>
+              <li class ="other"> <%= cl_image_tag message.sender.photo.key, width:30, class:'avatar'%>  <span><%= message.content %></span> </p> </li>
 
+            <% elsif (message.sender.photo.attached? == false) && message.sender == current_user%>
+              <li class ="current"> <span><%= message.content %></span>  <%= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668632392/wantedpets/avatar_bw2fg9.jpg', width:30, class:'avatar'%>  </p> </li>
+            <% elsif (message.sender.photo.attached? == false) && message.sender != current_user%>
+              <li class ="other"> <%= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668632392/wantedpets/avatar_bw2fg9.jpg', width:30, class:'avatar'%> <span> <%= message.content %></span></p> </li>
+            <% end %>
+          </ul>
+        <% end %>
+          </div>
+
+        <%= simple_form_for [@friend, @message] do |f| %>
+        <%= f.input :content,  label: 'Type your message :'  %>
+        <%= f.submit "Send message", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+</div>

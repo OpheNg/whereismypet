@@ -1,6 +1,6 @@
 <div class="mypage">
 
-  <div class="myup">
+  <div class="myup ">
     <div class="mytxt">
       <h1>Where is my pet ?</h1>
       <h3> Hello <span><%= current_user.email %></span>, welcome back to your homepage <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668239069/wantedpets/waving-hand_vzrzl0.png', width:'30px' %> </h3>
@@ -11,9 +11,9 @@
   </div>
   <br>
   <br>
-  <div class="mydown">
+  <div class="mygrid ">
 
-    <div class="mystuff">
+
       <div class="myprofile">
               <h3><%= link_to "My Profile", user_path(@user) %></h3>
             </div>
@@ -21,20 +21,16 @@
             <div class="myposts">
               <h3><%= link_to "My Posts", my_posts_path %></h3>
             </div>
-    </div>
 
 
-    <div class="gnl">
+
+
       <div class="lostnfound">
               <h3><%= link_to "Lost & Found", pets_path %></h3>
             </div>
 
             <div class="messages">
-              <h3><%= link_to "My Messages", messages_conversations_path %></h3>
+              <h3><%= link_to "Messages", messages_conversations_path %></h3>
             </div>
-    </div>
+
   </div>
-
-
-
-</div>

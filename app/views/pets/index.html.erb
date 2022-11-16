@@ -39,9 +39,9 @@
               <div class="clpet">
                 <li>
                   <% if pet.photo.attached?%>
-                      <%= cl_image_tag pet.photo.key, height: 200, width: 200, crop: :fill %>
+                      <%= cl_image_tag pet.photo.key, height: 160, width: 160, crop: :fill %>
                   <%else %>
-                    <% image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668206144/wantedpets/pawprint_q6euzv.png', height: 200, width: 200, crop: :fill %>
+                    <% image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668206144/wantedpets/pawprint_q6euzv.png', height: 160, width: 160, crop: :fill %>
                   <%end %>
                 </li>
               </div>
