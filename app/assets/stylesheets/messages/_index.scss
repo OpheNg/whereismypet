@@ -1,0 +1,97 @@
+.chatbg{
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_80/v1668635662/wantedpets/Sans_titre_-_2022-11-16T225413.950_rmndxv.png');
+  background-position: center;
+  background-size: cover;
+}.current{
+  color: rgb(51, 58, 81);
+  text-align: right;
+}
+.other {
+  color: rgb(83, 64, 225);
+  text-align: left;
+}
+.avatar{
+  border-radius: 50%;
+}
+.myconv{
+  margin: 20px auto;
+  width: 40%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  // overflow-y: scroll;
+
+
+}
+.myconv ul{
+  padding-left: 0;
+}
+.myconv b.colorful{
+ color: rgb(83, 64, 225);
+}
+.myconv span{
+  background-color: rgb(242, 241, 246);
+  padding: 2px 3px;
+  border-radius: 40px;
+}
+
+// SCROLLBAR
+
+#style-2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgb(190, 190, 190);
+	border-radius: 8px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #cdcdcd;
+
+}
+.scrollbar
+{
+
+
+	height: 500px;
+	// width: 400px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	// margin-bottom: 25px;
+}
+
+.force-overflow
+{
+	min-height: 20px;
+}
+
+#wrapper
+{
+	// text-align: center;
+	// width: 500px;
+	// margin: auto;
+}
+.back2 a{
+  margin: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(62, 138, 237);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+.back2 a:hover{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(29, 93, 176);
+  border-radius: 4px;
+  padding: 4px 6px;
+}
