@@ -1,19 +1,24 @@
 .chatbg{
-  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/o_80/v1668635662/wantedpets/Sans_titre_-_2022-11-16T225413.950_rmndxv.png');
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1668675648/wantedpets/Sans_titre_-_2022-11-17T100031.702_znwglv.png');
   background-position: center;
   background-size: cover;
   height: 100%;
-}.current{
+}
+
+.current{
   color: rgb(51, 58, 81);
   text-align: right;
 }
+
 .other {
   color: rgb(83, 64, 225);
   text-align: left;
 }
+
 .avatar{
   border-radius: 50%;
 }
+
 .myconv{
   margin: 0 auto;
   width: 40%;
@@ -22,9 +27,8 @@
   padding: 20px;
   background-color: white;
   // overflow-y: scroll;
-
-
 }
+
 .myconv ul{
   padding-left: 0;
 }
