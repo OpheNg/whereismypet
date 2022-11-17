@@ -23,14 +23,18 @@
           <ul>
 
             <% if message.sender.photo.attached? && message.sender == current_user%>
-              <li class ="current"> <span><%= message.content %> </span> <%= cl_image_tag message.sender.photo.key, width:30, class:'avatar'%>  </p> </li>
+              <li class ="current"> <i class="u"><%= message.created_at.strftime("%b %e %l:%M %p") %></i> <br><span><%= message.content %>  </span> <%= cl_image_tag message.sender.photo.key, width:30, class:'avatar'%>  <br>
+              </li>
             <% elsif message.sender.photo.attached? && message.sender != current_user%>
-              <li class ="other"> <%= cl_image_tag message.sender.photo.key, width:30, class:'avatar'%>  <span><%= message.content %></span> </p> </li>
+              <li class ="other"> <i class="o"><%= message.created_at.strftime("%b %e %l:%M %p") %></i> <br><%= cl_image_tag message.sender.photo.key, width:30, class:'avatar'%>  <span><%= message.content %></span> </p>
+              </li>
 
             <% elsif (message.sender.photo.attached? == false) && message.sender == current_user%>
-              <li class ="current"> <span><%= message.content %></span>  <%= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668632392/wantedpets/avatar_bw2fg9.jpg', width:30, class:'avatar'%>  </p> </li>
+              <li class ="current"> <i class="u"><%= message.created_at.strftime("%b %e %l:%M %p") %></i> <br><span><%= message.content %></span>  <%= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668632392/wantedpets/avatar_bw2fg9.jpg', width:30, class:'avatar'%> <br>
+              </li>
             <% elsif (message.sender.photo.attached? == false) && message.sender != current_user%>
-              <li class ="other"> <%= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668632392/wantedpets/avatar_bw2fg9.jpg', width:30, class:'avatar'%> <span> <%= message.content %></span></p> </li>
+              <li class ="other"> <i class="o"><%= message.created_at.strftime("%b %e %l:%M %p") %></i> <br><%= image_tag 'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668632392/wantedpets/avatar_bw2fg9.jpg', width:30, class:'avatar'%> <span> <%= message.content %></span></p>
+              </li>
             <% end %>
           </ul>
         <% end %>
@@ -38,6 +42,7 @@
 
         <%= simple_form_for [@friend, @message] do |f| %>
         <%= f.input :content,  label: 'Type your message :'  %>
+        <%#= f.input :attachment ,as: :file %>
         <%= f.submit "Send message", class: "btn btn-primary" %>
       <% end %>
     </div>

@@ -2,17 +2,19 @@
   background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1668675648/wantedpets/Sans_titre_-_2022-11-17T100031.702_znwglv.png');
   background-position: center;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
 }
 
 .current{
   color: rgb(51, 58, 81);
   text-align: right;
+  margin-right: 5px;
 }
 
 .other {
   color: rgb(83, 64, 225);
   text-align: left;
+  margin-left: 5px;
 }
 
 .avatar{
@@ -40,7 +42,16 @@
   padding: 2px 3px;
   border-radius: 40px;
 }
-
+.mess i.u{
+  font-size: 10px;
+  text-align: right;
+  margin-right: 40px;
+}
+.mess i.o{
+  font-size: 10px;
+  text-align: left;
+  margin-left: 40px;
+}
 // SCROLLBAR
 
 #style-2::-webkit-scrollbar-track

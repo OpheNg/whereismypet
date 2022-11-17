@@ -1,6 +1,6 @@
 class Pet < ApplicationRecord
   belongs_to :user
-  has_one_attached :photo
+  has_one_attached :photo, dependent: :destroy
 
   OPTIONS = ['Found', 'Lost']
   validates_inclusion_of :status, :in => OPTIONS
