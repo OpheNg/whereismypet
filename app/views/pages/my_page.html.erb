@@ -12,25 +12,22 @@
   <br>
   <br>
   <div class="mygrid ">
-
-
       <div class="myprofile">
-              <h3><%= link_to "My Profile", user_path(@user) %></h3>
-            </div>
-
-            <div class="myposts">
-              <h3><%= link_to "My Posts", my_posts_path %></h3>
-            </div>
-
-
-
-
+        <h3><%= link_to "My Profile", user_path(@user) %></h3>
+      </div>
+      <div class="myposts">
+        <h3><%= link_to "My Posts", my_posts_path %></h3>
+      </div>
       <div class="lostnfound">
-              <h3><%= link_to "Lost & Found", pets_path %></h3>
-            </div>
+        <h3><%= link_to "Lost & Found", pets_path %></h3>
+      </div>
+      <div class="messages">
+        <h3><%= link_to "Messages", messages_conversations_path %></h3>
+      </div>
+  </div>
 
-            <div class="messages">
-              <h3><%= link_to "Messages", messages_conversations_path %></h3>
-            </div>
+  <div class="BannerRandom ">
+    <%= image_tag'' %>
 
   </div>
+</div>
