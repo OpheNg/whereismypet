@@ -8,7 +8,13 @@
   <div id="wrapper">
     <div class="myconv" >
 
-      <h3>My conversation with <b class="colorful"><%= @friend.firstname %> <%= @friend.lastname %></b> </h3>
+      <h3> My conversation with
+        <% if @friend.firstname? && @friend.lastname? %>
+          <b class="colorful"><%= @friend.firstname %> <%= @friend.lastname %></b>
+        <% else %>
+          <b class="colorful"> <%= @friend.email %> </b>
+        <% end %></h3>
+
 
       <br>
         <div class="mess scrollbar" id="style-2">

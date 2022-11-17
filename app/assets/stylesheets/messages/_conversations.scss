@@ -1,1 +1,127 @@
 
+.convers{
+  background-image: url('https://res.cloudinary.com/dhxefoe7j/image/upload/v1668675648/wantedpets/Sans_titre_-_2022-11-17T100031.702_znwglv.png');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+}
+.convbox{
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  min-width: 200px;
+  padding: 24px;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  margin: 6px;
+  text-align: center;
+
+}
+// @media(max-width: 992px) {
+//   .convbox{
+//     grid-template-columns: 1fr ;
+//   }
+// }
+
+// @media(max-width: 768px) {
+//   .convbox{
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
+.convbox p{
+  margin-bottom: 2px;
+}
+.convbox a{
+  text-decoration: none;
+
+}
+
+.messboxes{
+  margin: 0 auto;
+  // height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-bottom: 20px;
+  background-color: white;
+  border-radius: 8px;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.frame{
+background-color: white;
+width: 500px;
+border-top-right-radius: 8px;
+border-bottom-right-radius: 8px;
+height: 100%;
+}
+.frame{
+
+  position: relative;
+}
+
+.global{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 0 20px;
+
+}
+.words h2{
+  color: rgb(83, 64, 225);
+  font-weight: bold;
+}
+.words p{
+  color: rgb(69, 69, 69);
+  font-size: 18px;
+}
+.imgchat{
+  // display: flex;
+  // justify-self: end;
+  // align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+}
+.messtitle{
+padding: 16px 20px;
+}
+
+//---------------------------------------------------//
+
+// scrollbar
+#sc::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgb(190, 190, 190);
+	border-radius: 8px;
+	background-color: #F5F5F5;
+}
+
+#sc::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#sc::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #cdcdcd;
+
+}
+.scroll
+{
+	height: 400px;
+	// width: 400px;
+	background: white;
+	overflow-y: scroll;
+	// margin-bottom: 25px;
+}
+
+.ok
+{
+	min-height: 20px;
+}

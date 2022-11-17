@@ -1,21 +1,55 @@
 <div class="convers">
-  <h1>Messages#conversations</h1>
-        <p>Find me in app/views/messages/conversations.html.erb</p>
+  <div class="messtitle">
+    <h1>Messenger</h1>
+  </div>
+  <br>
+  <br>
 
+  <div class="messboxes">
+    <div class="mess">
+      <% if @users_with_conversation.empty? %>
+        <br>
+        <h3>You don't have any conversation yet</h3>
+      <% else %>
 
-        <div class="mess">
-
-          <% if @users_with_conversation.empty? %>
-          <h3>You don't have any conversation yet</h3>
-        <% else %>
-          <h3>My conversations</h3>
-          <% @users_with_conversation.each do |user| %>
-            <%= link_to user_messages_path(user) do %>
-              <p>Conversation with <%= user.firstname %> <%= user.lastname %> </p>
+        <br>
+      <div class="scroll"id="sc">
+      <% @users_with_conversation.each do |user| %>
+        <div class="convbox ">
+          <div class="ok"></div>
+          <%= link_to user_messages_path(user) do %>
+            <% if user.firstname?  %>
+              <p> <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668678937/wantedpets/discuter_slf3lp.png', width:30 %> <%= user.firstname %> </p>
+            <% else %>
+              <p> <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668678937/wantedpets/discuter_slf3lp.png', width:30 %> <%= user.email %></p>
             <% end %>
           <% end %>
-        <% end %>
+          </div>
+          <% end %>
+      <% end %>
+      </div>
+    </div>
 
+    <div class="frame">
+
+      <div class="global">
+        <div class="words">
+          <h2>My conversations</h2>
+          <br><br>
+          <p>Let's have a chat with other pet owners !</p>
+          <p>Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         </div>
+        <div class="imgchat">
+          <%= image_tag'https://res.cloudinary.com/dhxefoe7j/image/upload/v1668684021/wantedpets/Sans_titre_-_2022-11-17T122013.951_wna7oz.png' , width:120%>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+  </div>
 
 </div>
